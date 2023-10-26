@@ -6,6 +6,7 @@ import {NavBarJs} from "./assets/NavBar.js"
 
 export default function NavBar({currentPage, handlePageChange}){
     return(
+      
       <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
