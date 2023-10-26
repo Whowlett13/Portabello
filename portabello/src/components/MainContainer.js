@@ -1,37 +1,40 @@
 import React, {useState} from "react";
 import About from "./About";
 import Contact from "./Contact";
-import French from "./French";
+// import French from "./French";
 import Header from "./Header";
 import Menu from "./Menu";
 import Navbar from "./NavBar";
-import Reservations from './Reservations';
+// import Reservations from './Reservations';
 
 
 export default function MainContainer(){
     const [currentPage, setCurrentPage] = useState("Home")
+    // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage,
+    // we return the corresponding component to render.
 const renderPage = () => {
-    if (currentPage === "NavBar"){
+    if (currentPage === "Home"){
         return <Navbar/>;    }
-        if (currentPage === "Home"){
+        if (currentPage === "Header"){
             return <Header/>;
         }
+            if (currentPage === "Menu"){
+                return <Menu/>;
+            } 
         if (currentPage === "About"){
             return <About/>;
         }
         if (currentPage === "Contact"){
             return<Contact/>;        }
-            
-            if (currentPage === "French"){
-                return <French/>;
-            }
-            if (currentPage === "Menu"){
-                return <Menu/>;
-            }
-            if  (currentPage === "Reservations"){
-                return <Reservations/>;
-            }
-}
+        };
+           
+            // if (currentPage === "French"){
+            //     return <French/>;
+            // }
+            // if  (currentPage === "Reservations"){
+            //     return <Reservations/>;
+            // }
+
 
 
     const handlePageChange = (page) => setCurrentPage(page);
@@ -39,9 +42,9 @@ const renderPage = () => {
     return (
       <div>
         {/* We are passing the currentPage from state and the function to update it */}
-        <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
+        <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
         {/* Here we are calling the renderPage method which will return a component  */}
         {renderPage()}
       </div>
     );
-}
+};
