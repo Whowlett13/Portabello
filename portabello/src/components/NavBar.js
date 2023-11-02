@@ -29,11 +29,11 @@ export default function NavBar({currentPage, handlePageChange}){
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#projects" class="header__link">
-                Projects
+               Contact
               </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
+              <a href="./index.html#contact" class="header__link"> French </a>
             </li>
           </ul>
           <div class="header__main-ham-menu-cont">

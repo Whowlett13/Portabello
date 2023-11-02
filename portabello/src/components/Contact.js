@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Contact() {
+export default function Contact({ currentPage, handlePageChange }) {
     return(
 <section id="contact" class="contact sec-pad dynamicBg">
       <div class="main-container">

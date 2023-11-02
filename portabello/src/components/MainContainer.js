@@ -1,11 +1,11 @@
-import React, {useState} from "react";
-import About from "./About";
+import React, { useState } from "react";
+import Home from "./Home";
 import Contact from "./Contact";
-// import French from "./French";
+import Banner from "./Banner";
 import Header from "./Header";
 import Menu from "./Menu";
 import Navbar from "./NavBar";
-// import Reservations from './Reservations';
+import Reservations from './Reservations';
 
 
 export default function MainContainer(){
@@ -13,27 +13,28 @@ export default function MainContainer(){
     // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage,
     // we return the corresponding component to render.
 const renderPage = () => {
-    if (currentPage === "Home"){
+    if (currentPage === "NavBar"){
         return <Navbar/>;    }
-        if (currentPage === "Header"){
+        if (currentPage === "Home"){
+            return <Home/>;
+        }
+        if (currentPage === "Home"){
             return <Header/>;
         }
             if (currentPage === "Menu"){
                 return <Menu/>;
             } 
-        if (currentPage === "About"){
-            return <About/>;
-        }
+        
         if (currentPage === "Contact"){
             return<Contact/>;        }
         };
            
-            // if (currentPage === "French"){
-            //     return <French/>;
+            // if (currentPage === "Banner"){
+            //     return <Banner/>;
             // }
-            // if  (currentPage === "Reservations"){
-            //     return <Reservations/>;
-            // }
+            if  (currentPage === "Reservations"){
+                return <Reservations/>;
+            }
 
 
 

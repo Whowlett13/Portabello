@@ -4,7 +4,7 @@ import FacebookLogo from "./assets/facebook.png";
 import InstagramLogo from "./assets/insta-ico.png";
 import TwitterLogo from "./assets/twitter-ico.png";
 
-export default function Footer() {
+export default function Footer({ currentPage, handlePageChange }) {
 return(
     <footer class="main-footer">
       <div class="main-container">
